@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 	int chars_printed = 0;
 
 	va_list args;
+
 	va_start(args, format);
 
 	if (format == NULL)
@@ -25,11 +26,13 @@ int _printf(const char *format, ...)
 			if (*format == 'c')
 			{
 				char c = (char)va_arg(args, int);
+
 				chars_printed += _putchar(c);
 			}
 			else if (*format == 's')
 			{
 				char *s = va_arg(args, char*);
+
 				chars_printed += print_string(s);
 			}
 			else if (*format == '%')
