@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
-	while (*format != '\0')
+	while (format && *format != '\0')
 	{
 		if (*format == '%')
 		{
@@ -35,7 +35,10 @@ int _printf(const char *format, ...)
 			else if (*format == '%')
 				chars_printed += _putchar('%');
 			else
-				chars_printed += _putchar('?');
+			{
+				chars_printed += _putchar('%');
+				chars_printed += _putchar(*format);
+			}
 		}
 		else
 			chars_printed += _putchar(*format);
