@@ -36,6 +36,11 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == '%')
 				chars_printed += _putchar('%');
+			else if (*format == '\0')
+			{
+				va_end(args);
+				return (-1);
+			}
 			else
 			{
 				chars_printed += _putchar('%');
