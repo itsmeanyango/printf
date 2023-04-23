@@ -11,6 +11,8 @@ int print_string(char *s)
 {
 	int i = 0;
 
+	if (s = NULL)
+		s = "(null)";
 	while (*s != '\0')
 	{
 		_putchar(*s);
