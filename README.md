@@ -91,7 +91,11 @@ FILES AND THEIR REAL LIFE IMPLEMENTATIONS:
 11. printf_zero_flag.c
 12. printf_minus_flag.c
 13. printf_reversed.c
-14. printf_rot13.c
+14. Printf_rot13.c
+Main.h
+README.md
+
+REAL LIFE IMPLEMENTATIONS
 
 0. The task is to write a custom printf function that formats and prints output to stdout according to the given format string. The function prototype takes in a format string and a variable number of arguments that match the format specifiers in the format string. The function should return the number of characters printed to stdout. A real-life implementation of this function could be used in a logging library or any program that needs to output formatted messages to the console.
 
@@ -127,3 +131,4 @@ FILES AND THEIR REAL LIFE IMPLEMENTATIONS:
 
 - Michelle Anyango Ojee
 - Adams Abdulmaleeek
+
