@@ -74,61 +74,10 @@ int main(void)
     return (0);
 }
 ```
-
-FILES AND THEIR REAL LIFE IMPLEMENTATIONS:
-
-0. printf.c
-1. printf_numbers.c
-2. printf_binary.c
-3. printf_hex_octal_unsigned.c
-4. printf_buffer.c
-5. printf_nonprintable.c
-6. printf_pointer.c
-7. printf_flags.c
-8. printf_length_modifiers.c
-9. printf_field_width.c
-10. printf_precision.c
-11. printf_zero_flag.c
-12. printf_minus_flag.c
-13. printf_reversed.c
-14. Printf_rot13.c
-Main.h
+FILES
 README.md
-
-REAL LIFE IMPLEMENTATIONS
-
-0. The task is to write a custom printf function that formats and prints output to stdout according to the given format string. The function prototype takes in a format string and a variable number of arguments that match the format specifiers in the format string. The function should return the number of characters printed to stdout. A real-life implementation of this function could be used in a logging library or any program that needs to output formatted messages to the console.
-
-1. This task extends the previous task by adding support for integer format specifiers - 'd' and 'i'. These specifiers represent signed integers, and the function should handle them by converting the integer argument to a string and printing it to stdout. A real-life implementation of this function could be used in a financial application that needs to format and print monetary values or in a scientific application that needs to format and print numerical data.
-
-2. This task adds a custom conversion specifier - 'b' - that converts an unsigned integer argument to binary and prints it to stdout. This functionality could be used in a computer networking application to convert IP addresses or other binary values to a human-readable format.
-
-3. This task adds support for several integer format specifiers - 'u', 'o', 'x', and 'X'. These specifiers represent unsigned integers in different formats (decimal, octal, hexadecimal lowercase, and hexadecimal uppercase, respectively). The function should handle these specifiers by converting the integer argument to a string in the specified format and printing it to stdout. A real-life implementation of this function could be used in a computer engineering or data analysis application that needs to format and print numerical data in various formats.
-
-4. This task requires the function to use a local buffer of 1024 chars to minimize calls to the write system function. This optimization is useful in high-performance applications where the function is called frequently, and minimizing system calls can improve the overall performance of the program.
-
-5. This task adds a custom conversion specifier - 'S' - that prints a string to stdout while converting non-printable characters to their hexadecimal ASCII code values. This functionality could be used in a security application that needs to sanitize and print user input or in a text processing application that needs to print text files while converting non-printable characters to their ASCII code values.
-
-6. The p conversion specifier is used to print the address of a pointer variable in hexadecimal format. A real-life implementation of this could be in debugging or low-level programming, where the programmer needs to inspect the memory addresses of variables and data structures.
-
-7. The +, space, and # flags are used to control the formatting of the output for certain conversion specifiers. For example, the + flag can be used to force the printing of a sign (+ or -) for a signed decimal number, while the space flag can be used to print a space character instead of a sign if the number is positive. The # flag can be used to add a prefix to the output for certain conversions, such as 0x for hexadecimal or 0 for octal. A real-life implementation could be in finance or accounting software where the formatting of numbers is important.
-
-8. The length modifiers l and h are used to indicate the size of the argument passed to the conversion specifier. For example, %ld is used to print a long integer, while %hx is used to print a short integer in hexadecimal format. A real-life implementation could be in scientific or engineering software where precise data types are used to represent physical quantities.
-
-9. The field width is a number that specifies the minimum number of characters to be printed for the corresponding argument. If the value to be printed is shorter than the field width, it is padded with spaces (or zeros if the 0 flag is used) to reach the required width. A real-life implementation could be in printing reports or tables where the alignment of columns is important.
-
-10. The precision is a number that specifies the maximum number of characters to be printed for the corresponding argument. For example, %.2f is used to print a floating-point number with 2 decimal places. A real-life implementation could be in financial or scientific software where precision is important for accurate results.
-
-11. The 0 flag is used to pad the output with leading zeros instead of spaces if the field width is larger than the value to be printed. A real-life implementation could be in formatting of numerical data in software that requires a fixed number of digits for display or for data exchange.
-
-12. The - flag is used to left-justify the output instead of right-justifying it (which is the default behavior). A real-life implementation could be in printing text in software that requires left-aligned text for readability, such as menus or user interfaces.
-
-13. The r custom conversion specifier is used to print the reverse of a string. A real-life implementation could be in software that needs to manipulate text, such as text editors or search engines.
-
-14. The R custom conversion specifier is used to apply the ROT13 cipher to a string (i.e., shift each letter by 13 positions in the alphabet). A real-life implementation could be in software that needs to obscure text, such as online forums or chat rooms where users want to avoid censorship or surveillance.
-
-## Authors
-
-- Michelle Anyango Ojee
-- Adams Abdulmaleeek
-
+main.h
+_printf.c printf_utility.c
+printf_write.c
+printf_format_specifiers.c
+printf_bases.c
