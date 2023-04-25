@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* print_char - Prints a single character 
+* print_char - Prints a single character
 * @types: A list of arguments
 * @buffer: Buffer array to handle print
 * @flags:  Calculates active flags
